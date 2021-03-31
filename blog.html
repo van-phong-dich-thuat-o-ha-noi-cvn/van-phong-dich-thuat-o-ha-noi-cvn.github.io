@@ -7,21 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#1 Dịch thuật công chứng chuyên nghiệp tại Hà Nội</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="header">
         <h1><img src="./img/logo-dich-thuat-cvn.png" alt="#1 công ty dịch thuật chuyên nghiệp tại Hà Nội" class=""></h1>
     </div>
-
-    <div class="topnav">
-        <a href="./index.html">Trang chủ</a>
-        <a href="#">Dịch vụ dịch thuật</a>
-        <a href="#">Dịch vụ khác</a>
+    <div class="topnav" id="myTopnav">
+        <!-- Navigation links (hidden by default) -->
+        <a href="./index.html" class="active">Trang chủ</a>
+        <a href="./blog.html">Dịch vụ dịch thuật</a>
+        <a href="./blog.html">Dịch vụ khác</a>
         <a href="./blog.html">Blog</a>
         <a href="#">Liên hệ</a>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
-
     <div class="row">
         <div class="leftcolumn">
             <div class="card">
@@ -71,6 +75,16 @@
     <div class="footer">
         <h2>Footer</h2>
     </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
 
 </html>
