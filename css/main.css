@@ -1,149 +1,102 @@
 * {
-    margin: 0;
-    padding: 0;
-}
-
-ol, ul {list-style: none;}
-
-img {
-    border: none;
-    vertical-align: top;
-}
-
-div#layout {
-    border: 1px solid #a3a2a3;
-    margin: 20px auto;
-    width: 900px;
-}
-
-div#header {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
     padding: 10px;
-}
-
-div.hLeft {
+    background: #f1f1f1;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    text-align: left;
+    background: white;
+  }
+  
+  .header h1 {
+    font-size: 10px;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
     float: left;
-}
-
-div.hLeft h1 {
-    margin-bottom: 20px;
-}
-
-div.hRight {
-    float: right;
-}
-div.hRight ul.hButton {
-    text-align: right;
-    margin-bottom: 37px;
-}
-
-div.hRight ul.hButton li {
-    display: inline;
-}
-
-div.hRight ul.hNav {
-    text-align: right;
-}
-
-div.hRight ul.hNav li {
-    display: inline;
-    border-right: 1px solid #333;
-    padding: 0 5px;
-}
-
-div.hRight ul.hNav li.last {
-    border-right: none;
-    padding-right: 0;
-}
-
-div#gnav {
-    clear:both;
-}
-
-div#gnav ul {
-    background: url(../img/bg_gnav.gif) repeat-x;
-    border: 1px solid #000;
-    height: 22px;
-    padding: 12px 0;
-}
-div#gnav ul li {
-    display: inline;
-    border-right: 1px solid #fff;
-    padding: 0 10px;
-}
-div#gnav ul li.last {
-    border-right: 0;
-    padding-right: 0;
-}
-
-div#gnav ul li a {
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-div#gnav ul li a:hover {
-    color: yellow;
-}
-
-div#pageBody {
-    padding: 20px 10px;
-}
-
-div#content {
-    float:left;
-    width: 620px;
-}
-div#content h2 {
-    border-bottom: 1px solid #666666;
-    font-size: 120%;
-    margin-bottom: 10px;
-}
-
-div#content div.newProduct {
-    margin-bottom: 20px;
-}
-
-div#content div.newProduct p.image {
-    float:left;
-    width: 241px;
-}
-div#content div.newProduct div {
-    float: right;
-    width: 350px;
-}
-div#content div.newProduct div h3 {
-    color: #5870e6;
-    margin-bottom: 10px;
-}
-div#content ul.thumbList {
-    border: 1px solid #ebeaea;
-    background: #f9f8f8;
-    clear: both;
-    padding: 10px 25px;
-}
-
-div#content ul.thumbList li {
-    display: inline;
-    padding-right: 8px;
-}
-
-div#sidebar {
-    float:right;
-    width: 240px;
-}
-
-div#footer {
-    clear:both;
-}
-
-div#content div.newProduct {
-    zoom: 1;
-}
-div#content div.newProduct:after {
-    clear: both;
-    content: ".";
     display: block;
-    height: 0;
-    line-height: 0;
-    visibility: hidden;
-}
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
